@@ -1,6 +1,6 @@
 // The Odds API Integration
 // Get your free API key at: https://the-odds-api.com/
-const ODDS_API_KEY = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_ODDS_API_KEY) || '5134684df2aeb1b1fed5acfa9715e8f6';
+const ODDS_API_KEY = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_ODDS_API_KEY) || 'YOUR_API_KEY_HERE';
 const ODDS_API_BASE = 'https://api.the-odds-api.com/v4';
 
 export interface OddsMatch {
@@ -26,7 +26,7 @@ export interface OddsMatch {
 // Fetch live sports odds
 export async function fetchLiveOdds(sport: string = 'upcoming'): Promise<OddsMatch[]> {
   // Check if API key is configured
-  if (ODDS_API_KEY === '5134684df2aeb1b1fed5acfa9715e8f6') {
+  if (ODDS_API_KEY === 'YOUR_API_KEY_HERE') {
     console.log('ℹ️ The Odds API key not configured. Using mock data. Get your free key at https://the-odds-api.com/');
     return [];
   }
@@ -52,7 +52,7 @@ export async function fetchLiveOdds(sport: string = 'upcoming'): Promise<OddsMat
 
 // Fetch available sports
 export async function fetchSports() {
-  if (ODDS_API_KEY === '5134684df2aeb1b1fed5acfa9715e8f6') {
+  if (ODDS_API_KEY === 'YOUR_API_KEY_HERE') {
     return [];
   }
 
